@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Consumer {
-    @KafkaListener(topics= {"NPHS_ISOTRAC_INVOICE"}, groupId="nphs_isotrac_sample")
+    @KafkaListener(topics= {"NPHS_ISOTRAC_INVOICE"}, groupId="isotrac_invoice")
     public void consume(String quote) {
         System.out.println("received= " + quote);
     }
